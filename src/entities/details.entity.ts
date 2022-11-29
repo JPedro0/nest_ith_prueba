@@ -1,5 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn } from 'typeorm';
-import { Sales } from './sales.entity';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class Details{
@@ -16,7 +15,6 @@ export class Details{
     @Column()
     unit_price : number
 
-    @ManyToOne(() => Sales, (sale) => sale.details)
-    @JoinColumn({name:'id_sale'})
+    @Column({default : 0})
     id_sale: number;
 }

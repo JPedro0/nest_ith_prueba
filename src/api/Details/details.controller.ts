@@ -1,6 +1,5 @@
 import { DetailsService } from './details.service';
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
-import { IDetails } from 'src/models/sales.models';
+import { Controller, Get, Param } from '@nestjs/common';
 
     @Controller('details')
 export class DetailsController {
